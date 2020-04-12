@@ -30,3 +30,6 @@ dontaudit dexoptanalyzer { privapp_data_file app_data_file }:dir audit_access;
 
 # Allow testing /data/user/0 which symlinks to /data/data
 allow dexoptanalyzer system_data_file:lnk_file { getattr };
+
+# Allow analyzing using boot profile
+allow dexoptanalyzer system_file:file { lock };
