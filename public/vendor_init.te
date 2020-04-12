@@ -249,6 +249,9 @@ get_prop(vendor_init, exported2_radio_prop)
 get_prop(vendor_init, exported3_system_prop)
 get_prop(vendor_init, theme_prop)
 
+# Allow /proc/sys/kernel/sched*
+allow vendor_init proc_sched:file w_file_perms;
+
 ###
 ### neverallow rules
 ###
